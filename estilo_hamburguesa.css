@@ -1,0 +1,891 @@
+:root {
+    --background-color: black;
+    --primary-color: rgb(250, 245, 245);
+}
+
+* {
+    font-size: 14px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+    background-color: var(--background-color);
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: relative;
+}
+
+.logo {
+    width: 100px;
+    height: 74px;
+    background: url(../imagenes/RS-LOGO3.png) no-repeat center;
+    font-size: 0;
+    margin:auto;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 0;
+}
+
+#barra {
+    max-width: 100%;
+    text-align: right;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.boton {
+    display:block;
+    background-color: #313131;
+    color: azure;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5%;
+}
+
+.boton:hover {
+    background-color: purple;
+}
+
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+    font-size: 1em;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+#barra {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 7em;
+    left: -100%;
+    background: black;
+    transition: left .5s ease;
+}
+
+#barra li {
+    list-style: none;
+    margin: 1em;
+    width: 90%;
+    display: inline-block;
+}
+
+#barra li a {
+    text-decoration: none;
+    display: block;
+    color: rgb(252, 249, 249);
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+nav {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+}
+
+#menu {
+    max-width: 100%;
+}
+
+#hamburguesa li {
+    list-style: none;
+    text-indent: -100px;
+    overflow: hidden;
+    margin-top: 1.75em;
+    width: 2.5em;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+#hamburguesa li a {
+    background: url("imagenes/menu.png") no-repeat center center;
+    background-size: cover;
+    display: block;
+    height: 2.5em;
+}
+
+#hamburguesa li:last-child {
+    display: none;
+}
+
+nav:target #barra {
+    left: 0;
+}
+
+nav:target #hamburguesa li:first-child {
+    display: none;
+}
+
+nav:target #hamburguesa li:last-child {
+    display: block;
+}
+
+h2,
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    font-size: 1em;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+#banner img {
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    header,
+    section,
+    footer {
+        margin: auto;
+        font-size: 16px;
+    }
+
+    #barra {
+        display: inline-block;
+        margin:auto;
+        text-align: right;
+        margin-top: 100px;
+        position: static;
+        height: auto;
+        background: none;
+    }
+
+    #hamburguesa {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #barra {
+        display: flex;
+        max-width: 100%;
+        text-align: center;
+        margin-top: 90px;
+        position: static;
+        height: auto;
+        background: none;
+    }
+
+    .logo {
+        width: 150px;
+        height: 100px;
+        left: calc(50% - 75px);
+        background: url(/imagenes/RS-LOGO.png) no-repeat center;
+        font-size: 0;
+        position: relative;
+        left: 35px;
+        margin: 5px;
+        z-index: 1;
+    }
+
+    .logo {
+        left: calc(50% - 50px);
+    }
+    
+    h1 {
+        font-size: 0;
+    }
+
+    #banner img {
+        margin-top: 50px;
+        max-height: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #intro {
+        color: white;
+        text-align: justify;
+        width: auto;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+
+
+    #intro p {
+        color: rgb(167, 164, 164);
+        font-weight: 100px;
+        font-size: 1.5em;
+        text-align: justify;
+        line-height: 1.4em;
+        padding-top: 10px;
+    }
+
+    #caja_entrenamientos {
+        max-width:100%;
+        display: grid;
+        margin: 10px auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 10px;
+        background: black;
+        margin-bottom: 50px;
+        margin-top: 40px;
+    }
+    
+    #entrenamientos p {
+        margin: 5px 5px;
+        text-align: center;
+        color: white;
+        font-size:1.2em;
+    }
+
+    #caja_entrenamientos li {
+        color: whitesmoke;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+
+    #item1 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+
+    #item2 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+    #item3 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+    #item4 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+
+    #caja_entrenamientos a {
+        margin: auto;
+        margin-bottom: 60px;
+        max-width: 40%;
+        padding: 3px;
+        font-size: 12px;
+        margin-top: 20px;
+        background-color: #474746;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /*ACTUALIDAD**/
+
+    #caja {
+        max-width: 100%;
+        padding: 10px;
+        background: black;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px auto;
+        column-gap: 30px;
+    }
+
+    .grid_item-1{
+
+        float: left;
+    }
+    .grid_item-2{
+
+        float: right;
+    }
+
+    #caja p {
+        text-align:justify;
+        margin: auto;
+        font-size: 1em;
+        line-height: 1.5em;
+        color: rgb(167, 164, 164);
+        margin-bottom: 30px;
+    }
+
+
+
+    /*   SOBRE NOSOTROS **/
+
+    #nosotros {
+        background-color: var(--background-color);
+        color: white;
+        max-width: 100%;
+        text-align: justify;
+        margin: 10px auto;
+        padding-bottom: 100px;
+    }
+
+    #nosotros h3 {
+        padding-top: 20px;
+        text-align: center;
+        justify-content: space-between;
+        font-size: 1.5em;
+
+    }
+
+    #nosotros h2 {
+        margin-top: 50px;
+        font-size: 2.5em;
+        color: white;
+    }
+
+    #nosotros p {
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin: 10px;
+        text-align: center;
+        color: whitesmoke;
+        font-size:1.5em ;
+    }
+
+    /*video**/
+
+    .main-video .video video {
+        display: block;
+        margin: 50px auto;
+        max-width: 100%;
+        margin-bottom: 55px;
+        margin-top: 50px;
+        border: 1px solid rgb(248, 246, 246);
+    }
+
+    .main-video .video h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+
+    .main-video .video p {
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        color: rgb(167, 164, 164);
+    }
+
+    /*rs mujer**/
+
+    #rs_mujer {
+        font-size: 1em;
+        max-width: 100%;
+        margin: 5px 5px;
+        margin-top: 10px;
+    }
+
+    #rs_mujer h3 {
+        padding-top: 30px;
+        margin: 5px 5px;
+        font-size: 1.5em;
+    }
+
+    #rs_mujer .texto {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.2em;
+        line-height: 1.9em;
+        text-align: justify;
+        padding: 10px;
+    }
+
+    #rs-mujer img {
+        position: relative;
+        margin-top: 50px;
+        margin: 0 auto;
+        padding: 30px;
+        max-width: 50%;
+    }
+
+    #rs_mujer .articulo p {
+        font-size: 1.2em;
+        margin-top: 20px;
+        display: inline-block;
+        padding: 8px;
+        text-align: justify;
+    }
+
+    /*galeria**/
+
+    #galeria h2 {
+        margin-top: 100px;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    #galeria h3 {
+        margin-top: 30px;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .fotorama {
+        max-width: 100%;
+        margin: 100px auto;
+
+    }
+
+    /*contacto**/
+
+    .contacto h2 {
+        font-size: 2.5em;
+    }
+
+    .contacto {
+        padding-bottom: 30px;
+        color: white;
+        width: auto;
+    }
+
+    .emails li a {
+        font-size: 1em;
+        color: rgb(95, 209, 209);
+        text-decoration: none;
+    }
+
+    .emails p {
+        font-size: 1.2em;
+        color: whitesmoke;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .emails ul li {
+        list-style: none;
+    }
+
+    footer,
+    a,
+    p {
+        max-width: 100%;
+        color: whitesmoke;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+
+    header,
+    section,
+    footer {
+        margin: auto;
+        font-size: 16px;
+    }
+
+    #hamburguesa {
+        display: none;
+    }
+   
+    .logo {
+        width: 150px;
+        height: 111px;
+        left: calc(50% - 75px);
+        background: url(/imagenes/RS-LOGO.png) no-repeat center;
+        font-size: 0;
+position: relative;
+        left: 35px;
+        margin: 20px;
+        z-index: 1;
+    }
+    
+    h1 {
+        font-size: 0;
+    }
+
+    #barra {
+        display: inline-block;
+        margin:auto;
+        text-align: right;
+        margin-top: 80px;
+        position: static;
+        height: auto;
+        background: none;
+    }
+
+    #banner img {
+        margin-top: 10px;
+        max-height: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #menu {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    #barra li {
+        width: 120px;
+        margin: 0px 5px;
+        text-align: center;
+    }
+
+    .boton {
+        margin: 2px 10px;
+        display: inline-block;
+        background-color: #313131;
+        color: azure;
+        padding: 5px;
+        text-decoration: none;
+        border-radius: 5%;
+    }
+
+    #intro h2 {
+        font-size: 2.5em;
+    }
+
+    #entrenamientos h2 {
+        font-size: 2.5em;
+    }
+
+    #entrenamientos h3 {
+        font-size: 1.5em;
+    }
+
+    #caja_entrenamientos a {
+        margin: auto;
+        margin-bottom: 60px;
+        width: 100%;
+        padding: 3px;
+        font-size: 12px;
+        margin-top: 20px;
+        background-color: #0f0f0f;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #caja_entrenamientos {
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 40px auto;
+        margin-bottom: 30px;
+        column-gap: 20px;
+    }
+
+    #caja_entrenamientos p {
+        margin: 5px 5px;
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+    }
+
+    #caja_entrenamientos .img {
+        padding: 5px;
+        max-width: 100%;
+    }
+
+    #caja_entrenamientos li {
+        color: whitesmoke;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+
+    #item1 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+
+    #item2 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+    #item3 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+    #item4 {
+        max-width: 100%;
+        list-style: none;
+        border: 1px solid whitesmoke;
+        border-radius: 5%;
+        margin: 10px auto;
+    }
+
+    #item1 img {
+        padding-top: 10px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+    
+    #item2 img {
+        padding-top: 10px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+    
+    #item3 img {
+        padding-top: 10px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+    
+    #item4 img {
+        padding-top: 10px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    /*ACTUALIDAD**/
+
+    #actualidad{
+        max-width: 1000px;
+    }
+
+    #caja {
+        max-width: 100%;
+        padding: 10px;
+        background: black;
+        margin-bottom: 50px;
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        margin: 20px auto;
+        gap: 2;
+    }
+
+    #actualidad h2 {
+        font-size: 2.5em;
+    }
+
+    #actualidad h3 {
+        font-size: 1.5em;
+        text-align: center;
+        margin:10px auto;
+    }
+
+    #caja p {
+        text-align: justify;
+        margin: 10px 50px;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        color: whitesmoke;
+        margin-bottom: 30px;
+    }
+
+    .main-video .video h2 {
+        font-size: 2.5em;
+    }
+
+    .main-video .video video{
+        display: block;
+        margin: 50px auto;
+        max-width: 100%;
+        margin-bottom: 55px;
+        margin-top: 50px;
+        border: 1px solid rgb(248, 246, 246);
+    }
+
+
+
+    .main-video .video p {
+        text-align: center;
+        margin: auto;
+        font-size: 1.5em;
+        line-height: 1.4em;
+        color: whitesmoke;
+        margin-bottom: 15px;
+    }
+
+    #nosotros .nosotros h2 {
+        font-size: 2.5em;
+    }
+
+    #nosotros .nosotros h3 {
+        font-size: 1.5em;
+    }
+
+    #nosotros {
+        margin-top: 80px;
+    }
+
+    #nosotros .columnas {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    #nosotros .columnas p {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+
+    #rs_mujer {
+        display: block;
+        max-width: 100%;
+        height: 100%;
+        margin-bottom: 90px;
+        margin: 10px 30px;
+    }
+
+    #rs_mujer h2 {
+        font-size: 2.5em;
+    }
+
+    #rs_mujer h3 {
+        padding-top: 30px;
+        margin: 5px 5px;
+        font-size: 2.em;
+    }
+
+    .rs-mujer img {
+        max-width: 60%;
+        position: relative;
+        margin-top: 50px;
+        margin: 0 10px;
+        padding: 30px;
+    }
+
+    #rs_mujer .texto {
+        font-size: 1.5em;
+        text-align: justify;
+        line-height: 1.5em;
+        margin: 5px 20px;
+    }
+
+    #rs_mujer .articulo p {
+        height: 100%;
+        color: whitesmoke;
+        text-align: justify;
+        margin: 5px 30px;
+        margin-bottom: 30px;
+        font-size: 1.5em;
+        line-height: 1.5em;
+
+    }
+
+    #galeria h2 {
+        margin-top: 200px;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    #galeria h3 {
+        margin-top: 30px;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .fotorama {
+        max-width: 100%;
+        margin: 100px auto;
+
+    }
+
+    .contacto h2 {
+        font-size: 2.5em;
+    }
+
+    .contacto {
+        padding-bottom: 30px;
+        color: white;
+        width: auto;
+    }
+
+    .emails li a {
+        font-size: 1em;
+        color: rgb(95, 209, 209);
+        text-decoration: none;
+    }
+
+    .emails p {
+        font-size: 1.2em;
+        color: whitesmoke;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .davinci p {
+        font-size: 1.2em;
+        color: whitesmoke;
+        text-align: center;
+        line-height: 25px;
+    }
+
+    .emails ul li {
+        list-style: none;
+    }
+
+    .davinci ul li {
+        list-style: none;
+    }
+
+    footer,
+    a,
+    p {
+        max-width: 100%;
+        color: whitesmoke;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+
+}

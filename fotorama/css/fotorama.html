@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fotorama.css">
+
+   <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+section{
+    max-width: 1000px;
+}
+
+
+
+
+
+
+
+
+   </style>
+</head>
+<body>
+    <h2>GALERIA</h2>
+
+    <section class="fotorama" data-width="100%" data-radio="1000/667">
+
+        <picture>
+            <source media="(max-width:499px )" srcset="fotorama/imagenes/1cel.jpg">
+            <source media="(max-width:899px )" srcset="fotorama/imagenes/1tab.jpg">
+            <img src="fotorama/imagenes/1pc.jpg" alt="foto1">
+        </picture>
+        <picture>
+            <source media="(max-width:499px )" srcset="fotorama/imagenes/2cel.jpg">
+            <source media="(max-width:899px )" srcset="fotorama/imagenes/2tab.jpg">
+            <img src="fotorama/imagenes/2pc.jpg" alt="foto2">
+        </picture>
+        <picture>
+            <source media="(max-width:499px )" srcset="fotorama/imagenes/3cel.jpg">
+            <source media="(max-width:899px )" srcset="fotorama/imagenes/3tab.jpg">
+            <img src="fotorama/imagenes/3pc.jpg" alt="foto3">
+        </picture>
+        <picture>
+            <source media="(max-width:499px )" srcset="fotorama/imagenes/4cel.jpg">
+            <source media="(max-width:899px )" srcset="fotorama/imagenes/4tab.jpg">
+            <img src="fotorama/imagenes/4pc.jpg" alt="foto3">
+        </picture>
+
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/fotorama.js"></script>
+    
+</body>
+</html>
